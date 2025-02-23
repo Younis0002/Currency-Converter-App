@@ -1,0 +1,143 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+    background: url('bg.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgb(255, 255, 255);
+    width: 100%;
+    max-width: 450px;
+    animation: fadeIn 1s ease-in-out;
+    backdrop-filter: blur(10px); /* Glass effect */
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: yellow;
+    background: linear-gradient(90deg, #0073e6, #00c6ff);
+    -webkit-background-clip: text;
+}
+
+/* Form Labels */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    color: yellow;
+}
+
+/* Inputs and Select Menus */
+input, select {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #0073e6;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 115, 230, 0.3);
+}
+
+/* Convert Button */
+button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #0073e6, #00c6ff);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 115, 230, 0.3);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 115, 230, 0.4);
+}
+
+/* Result Display */
+#result {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    color: #333;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #0073e6;
+    border-radius: 8px;
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 2rem;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input, select, button {
+        font-size: 1rem;
+        padding: 0.9rem;
+    }
+}
